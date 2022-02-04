@@ -2,10 +2,11 @@ import { ReactNode } from "react";
 import DefaultOverlayContent from "../DefaultOverlayContent";
 import { ModelSection, ModelsWrapper } from "../Model";
 import UniqueOverlay from "../UniqueOverlay";
-
+import { ReactComponent as SolarFour } from '../../images/solar4.svg';
 import { Container, Spacer } from "./styles";
 
 const Page: React.FC = () => {
+
   return (
     <>
     <Container>
@@ -52,7 +53,9 @@ const Page: React.FC = () => {
                   description="Order Online for Delivery"
                 />
               }
-            />
+            >
+              <SolarFour />
+              </ModelSection>
         <Spacer />
         <UniqueOverlay />
       </ModelsWrapper>
