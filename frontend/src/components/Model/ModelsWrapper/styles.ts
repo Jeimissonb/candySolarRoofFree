@@ -13,5 +13,4 @@ export const OverlaysRoot = styled.div`
   right: 0;
   bottom: 0;
 `
-export const ModelOverlay = styled.div`
-`
+

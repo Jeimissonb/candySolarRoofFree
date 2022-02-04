@@ -1,22 +1,24 @@
 import { ReactNode } from "react";
 import DefaultOverlayContent from "../DefaultOverlayContent";
 import { ModelSection, ModelsWrapper } from "../Model";
+import UniqueOverlay from "../UniqueOverlay";
 
-import { Container } from "./styles";
+import { Container, Spacer } from "./styles";
 
 const Page: React.FC = () => {
   return (
+    <>
     <Container>
       <ModelsWrapper>
-        <div>
+        {/*<div>
           {[
-            "Model One",
-            "Model Two",
-            "Model Three",
-            "Model Four",
-            "Model Five",
-            "Model Six",
-            "Model Seven",
+            "Página um",
+            "Página dois",
+            "Página três",
+            "Página quatro",
+            "Página cinco",
+            "Página seis",
+            "Página sete",
           ].map((modelName) => (
             <ModelSection
               key={modelName}
@@ -30,9 +32,32 @@ const Page: React.FC = () => {
               }
             />
           ))}
-        </div>
+            </div> */}
+            <ModelSection
+              className="colored"
+              modelName={"pipoca"}
+              overlayNode={
+                <DefaultOverlayContent
+                  label={"fritas"}
+                  description="Order Online for Delivery"
+                />
+              }
+            />
+            <ModelSection
+              className="colored"
+              modelName={"oie"}
+              overlayNode={
+                <DefaultOverlayContent
+                  label={"julia"}
+                  description="Order Online for Delivery"
+                />
+              }
+            />
+        <Spacer />
+        <UniqueOverlay />
       </ModelsWrapper>
     </Container>
+    </>
   );
 };
 
